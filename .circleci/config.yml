@@ -2,7 +2,7 @@ version: 2
 defaults:
   default_executor: &default_executor
     docker:
-      - image: cimg/node:20.18
+      - image: cimg/node:10.23
     working_directory: ~/project
     resource_class: small
   npm_cache_key: &npm_cache_key
