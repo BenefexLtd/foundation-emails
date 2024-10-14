@@ -1,0 +1,45 @@
+version: 2
+defaults:
+  default_executor: &default_executor
+    docker:
+      - image: circleci/node:20
+    working_directory: ~/project
+    resource_class: small
+  npm_cache_key: &npm_cache_key
+    v1-npm-{{ checksum "package-lock.json" }}
+  npm_cache: &npm_cache
+    restore_cache:
+      keys:
+        - *npm_cache_key
+jobs:
+  install:
+    <<: *default_executor
+    steps:
+      - checkout
+      - *npm_cache
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - save_cache:
+          key: *npm_cache_key
+          paths:
+            - ~/.npm
+            - ./node_modules
+  test:
+    <<: *default_executor
+    steps:
+      - checkout
+      - *npm_cache
+      - run:
+          name: Test
+          command: npm test
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - install:
+          context: gcloud
+      - test:
+          context: gcloud
+          requires:
+            - lint
