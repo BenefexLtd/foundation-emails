@@ -42,4 +42,4 @@ workflows:
       - test:
           context: gcloud
           requires:
-            - lint
+            - install
