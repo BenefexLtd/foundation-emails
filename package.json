@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "A framework for responsive emails",
   "keywords": [
     "responsive",
@@ -36,7 +36,7 @@
     "gulp-prompt": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rsync": "0.0.8",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-wrap": "^0.15.0",
@@ -46,7 +46,7 @@
     "lazypipe": "^1.0.1",
     "lodash.template": ">=4.5.0",
     "marked": "^4.0.10",
-    "motion-ui": "^2.0.3",
+    "motion-ui": "^2.0.8",
     "multiline": "^2.0.0",
     "octophant": "^1.0.0",
     "panini": "^1.7.1",
