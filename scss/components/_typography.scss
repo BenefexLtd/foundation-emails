@@ -150,7 +150,7 @@ $anchor-color-visited: $anchor-color !default;
 
 /// Text color of anchors on hover.
 /// @type Color
-$anchor-color-hover: color.adjust($primary-color, $lightness: -10%, $space: hsl) !default;
+$anchor-color-hover: color.adjust($primary-color, $lightness: -10%) !default;
 
 /// Text color of active anchors.
 /// @type Color
